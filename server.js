@@ -33,13 +33,17 @@ app.use(passport.session())
 
 //Mount routes
 app.use('/', indexRoute)
-app.use("/", mallRoute);
+app.use('/', mallRoute);
+
 
 
 app.use(express.static('public')) // for bootstrab
 
 
 mongoose.set('strictQuery', false)
+
+require('dotenv').config()
+
 
 //Node.js to look in a folder called views for all the ejs files.
 app.set("view engine", "ejs");

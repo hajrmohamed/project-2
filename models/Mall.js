@@ -4,8 +4,9 @@ const mallSchema = mongoose.Schema(
   {
     name: String,
     location: String,
+    image:String,
   },
-  
+
   {
     timestamps: true,
   }

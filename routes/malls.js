@@ -17,7 +17,7 @@ const mallControl = require("../controllers/malls");
 
 router.get("/mall/add", mallControl.mall_create_get);
 router.post("/mall/add", mallControl.mall_create_post);
-// router.get("/malll/index", mallControl.mall_index_get);
+router.get("/mall/index", mallControl.mall_index_get);
 
 //default in every route
 module.exports = router;

@@ -1,20 +1,11 @@
-<h1>Malls</h1>
 
-<table>
-    <tr>
-        <th>name</th>
-        <th>location</th>
-    </tr>
 
     <% malls.forEach(function(mall){ %>
-        <tr>
-            <td>
-                <a>
-                 <%= mall.name %> </a> </td>
+      <div>
+            <div> <%= mall.name %> </div>
 
-            <td><%= mall.location%></td>
-
-        </tr>
+            <div><%= mall.location%></div>
+   
+        
+    </div>
     <%})%>
-
-</table>

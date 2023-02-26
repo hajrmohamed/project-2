@@ -8,7 +8,7 @@ exports.mall_create_get = (req, res) => {
       })
       .catch((err) => {
         console.log(err);
-        res.send("please try again later");
+        res.send("please try again later!");
       });
 };
 
@@ -24,12 +24,12 @@ exports.mall_create_post = (req, res) => {
       })
       .catch((err) => {
         console.log(err);
-        res.send("please try again later");
+        res.send("please try again later!");
       });
   };
 
   exports.mall_index_get = (req, res) => {
-    Mall.find().populate("mall") //query to the db, find all the articles in db ,
+    Mall.find() //query to the db, find all the articles in db ,
       //like fetch if ok go to .then if not exit succesfully go to .catch and get error
       .then((malls) => {
    
