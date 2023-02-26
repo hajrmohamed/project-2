@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
+//const passport = require('passport')
 const passport = require('../lib/passportConfig')
 
 exports.auth_signup_get = (req, res) => {
