@@ -1,20 +1,16 @@
-//default in every route
-const express = require("express");
 
-//default in every route
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
 
-const authControl = require("../controllers/auth");
+const authCntrl = require('../controllers/auth')
 
-router.get("/auth/signup", authControl.auth_signup_get);
-router.post("/auth/signup", authControl.auth_signup_post);
+router.get('/auth/signup', authCntrl.auth_signup_get)
+router.post('/auth/signup', authCntrl.auth_signup_post)
+router.get('/auth/signin', authCntrl.auth_signin_get)
+router.post('/auth/signin', authCntrl.auth_signup_post)
 
-router.get("/auth/signin", authControl.auth_signin_get);
-router.post("/auth/signin", authControl.auth_signin_post);
-
-// router.get("/auth/logout", authControl.auth_logout_get)
+router.get('/auth/signout', authCntrl.auth_signout_get)
 
 
 
-
-module.exports = router;
+module.exports = router
