@@ -51,5 +51,6 @@ mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mo
 )
 
 app.get('/a', (req,res) => {
-    res.send('home/another')
+    res.render('home/another')
 })
+
