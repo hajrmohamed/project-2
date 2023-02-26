@@ -19,7 +19,10 @@ app.use(expressLayout)
 
 //import routes
 const indexRoute = require('./routes/index')
+
 const authRoute = require('./routes/auth')
+const mallRoute = require("./routes/malls");
+
 
 app.use(session({
     secret: 'supersecuresecret!',
@@ -34,6 +37,10 @@ app.use(passport.session())
 //Mount routes
 app.use('/', indexRoute)
 app.use('/', authRoute)
+app.use("/", mallRoute);
+
+
+
 app.use(express.static('public')) // for bootstrab
 
 

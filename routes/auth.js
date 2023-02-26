@@ -1,3 +1,4 @@
+
 const express = require('express')
 const router = express.Router()
 
@@ -13,4 +14,3 @@ router.get('/auth/signout', authCntrl.auth_signout_get)
 
 
 module.exports = router
-

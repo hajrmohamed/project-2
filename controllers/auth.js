@@ -25,7 +25,7 @@ exports.auth_signup_post = (req, res) => {
     })
     .catch(err => {
         console.log(err)
-        res.send('Something went wrong, please try again later! Salman says you\'re a numpty!')
+        res.send('Something went wrong, please try again later!')
     })
 }
 
