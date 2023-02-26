@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "project-2",
   "version": "1.0.0",
   "description": "",
@@ -19,8 +18,8 @@
     "url": "https://github.com/hajrmohamed/project-2/issues"
   },
   "homepage": "https://github.com/hajrmohamed/project-2#readme",
-=======
->>>>>>> d1d29cfc9624113d13f29e5bf0bddd01232aaf64
+
+
   "dependencies": {
     "bcrypt": "^5.1.0",
     "dotenv": "^16.0.3",
