@@ -1,28 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=devi ce-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheet/style.css" />
-    <title>parking-App</title>
-  </head>
-  <body>
-    <nav>
-        <h1>This is Home page </h1>
- 
-   
-      <a href="/article/index">Articles</a>
-      <a href="/article/add">Add Article</a>
-      <a href="/author/add">Add Author</a>
-      <a href="/auth/signup">Sign Up</a>
-      <a href="/auth/signin">Sign In</a>
-      <a href="/auth/logout">Log Out</a>
-    </nav>
-    
-    <hr /> 
-    <div class="container"><%- body %></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking-App</title>
+</head>
+<body>
+    Shared Header served from Layout Page
+    <div><h1>Blog App</h1></div>
+    <hr>
 
-    <footer>This is the footer</footer>
-  </body>
+    <nav>
+        <!-- <a href="/article/index">Articles</a>
+        <a href="/article/add">Add Article</a>
+        <a href="/author/add">Add Author</a> -->
+        <a href="/auth/signup">Sign Up Here</a>
+        <a href="/auth/signin">Sign In Here</a>
+        <a href="/auth/signout">Sign Out</a>
+
+    </nav>
+
+    <%- body %>
+
+    <br><hr>
+    Shared Footer served from Layout Page
+
+</body>
 </html>

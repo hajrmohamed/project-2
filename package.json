@@ -31,5 +31,26 @@
     "mongoose": "^6.10.0",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0"
-  }
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "project-2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahmoud6077/project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahmoud6077/project-2/issues"
+  },
+  "homepage": "https://github.com/Mahmoud6077/project-2#readme",
+  "description": ""
 }

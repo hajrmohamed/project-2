@@ -19,7 +19,10 @@ app.use(expressLayout)
 
 //import routes
 const indexRoute = require('./routes/index')
+
+const authRoute = require('./routes/auth')
 const mallRoute = require("./routes/malls");
+
 
 app.use(session({
     secret: 'supersecuresecret!',
@@ -33,10 +36,13 @@ app.use(passport.session())
 
 //Mount routes
 app.use('/', indexRoute)
+app.use('/', authRoute)
 app.use("/", mallRoute);
 
 
+
 app.use(express.static('public')) // for bootstrab
+
 
 
 mongoose.set('strictQuery', false)
@@ -57,4 +63,10 @@ mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mo
 app.get('/a', (req,res) => {
     res.render('home/another')
 })
+
+//********************************************************************************* */
+
+// app.get('/b', (req,res) => {
+//     res.render('auth/signin')
+// })
 
