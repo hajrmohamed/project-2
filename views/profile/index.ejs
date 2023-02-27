@@ -1,0 +1,32 @@
+<h1>Profile</h1>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>phone</th>
+        <th>email</th>
+    </tr>
+
+    <% User.forEach(function(user) { %>
+    <tr>
+        <td>
+            <a href="/article/detail?id=<%= article._id %>">
+            <%= article.title %> </a>
+        </td>
+
+        <td> <%= article.content %> </td>
+        <td> <%= article.isPublished %> </td>
+        <td> <%= article.totalWords %> </td>
+        <td> <%= article.author[0].name %> </td>
+        <td><a href="/article/edit?id=<%=article._id%>">Edit</a></td>
+        <td>
+            <!-- <a href="/article/delete?id=<%=//article._id%>">Delete</a> -->
+            <form method="POST" action="/article/delete?id=<%=article._id%>&_method=DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    <% }) %>
+
+</table>
