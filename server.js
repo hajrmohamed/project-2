@@ -42,8 +42,8 @@ app.use("/", mallRoute);
 
 
 
-app.use(express.static('public')) // for bootstrab
-
+// app.use(express.static('public')) // for bootstrab
+app.use(express.static(__dirname + "/public"));
 
 
 mongoose.set('strictQuery', false)
@@ -63,6 +63,10 @@ mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mo
         console.log('MongooDB connected')
     }
 )
+
+app.get('/mall/index', (req,res) => {
+    res.render('home/another', {title:'malls'},)
+})
 
 app.get('/a', (req,res) => {
     res.render('home/another')
