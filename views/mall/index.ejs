@@ -1,11 +1,10 @@
 
 
     <% malls.forEach(function(mall){ %>
-      <div>
-            <div> <%= mall.name %> </div>
+    <div>
+        <div> <img src="/images/<%=mall.image%>"> </div>
+        <div> <%= mall.name %> </div>
 
-            <div><%= mall.location%></div>
-   
-        
+        <div><%= mall.location%></div>
     </div>
     <%})%>

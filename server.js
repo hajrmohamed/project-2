@@ -3,6 +3,8 @@ const app = express()
 const mongoose = require('mongoose')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
+const multer  = require('multer')
+const upload = multer({ dest: 'images/' })
 const port = 3000
 
 
@@ -19,7 +21,6 @@ app.use(expressLayout)
 
 //import routes
 const indexRoute = require('./routes/index')
-
 const authRoute = require('./routes/auth')
 const mallRoute = require("./routes/malls");
 
@@ -42,8 +43,8 @@ app.use("/", mallRoute);
 
 
 
-app.use(express.static('public')) // for bootstrab
-
+// app.use(express.static('public')) // for bootstrab
+app.use(express.static(__dirname + "/public"));
 
 
 mongoose.set('strictQuery', false)
@@ -53,6 +54,8 @@ require('dotenv').config()
 
 //Node.js to look in a folder called views for all the ejs files.
 app.set("view engine", "ejs");
+
+app.use(express.static("images"))
 
 mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mongodb.net/parking_app?retryWrites=true&w=majority",
     {
