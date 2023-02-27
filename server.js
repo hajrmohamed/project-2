@@ -67,6 +67,10 @@ mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mo
     }
 )
 
+app.get('/mall/index', (req,res) => {
+    res.render('home/another', {title:'malls'},)
+})
+
 app.get('/a', (req,res) => {
     res.render('home/another')
 })

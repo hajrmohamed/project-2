@@ -6,10 +6,9 @@ const userSchema = mongoose.Schema({
     lastName: {type: String, required: true},
     emailAddress: {type: String, required: true},
     phone: {type:Number, required:true},
-    // password: {type: String, required: true},
-    isAdmin:false,
-
-
+    password: {type: String, required: true},
+    isAdmin:{type: Boolean, default: false}
+    
 },
 {
     timestamps: true
