@@ -23,7 +23,7 @@ const upload = multer ({
             cb(null, "/images");
         },
         filename:function(req, file, callback){
-            callback(null, this.filename + "_"+ Data.row()+path.extnamme(file.originalname))
+            callback(null, this.filename + "_"+ Data.row()+path.extnamme(file))
         }
 
     })

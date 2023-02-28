@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
 const multer  = require('multer')
-const upload = multer({ dest: 'images/' })
+
 const port = 3000
 
 
@@ -55,7 +55,8 @@ require('dotenv').config()
 //Node.js to look in a folder called views for all the ejs files.
 app.set("view engine", "ejs");
 
-app.use(express.static("images"))
+
+
 
 mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mongodb.net/parking_app?retryWrites=true&w=majority",
     {
@@ -74,6 +75,8 @@ app.get('/mall/index', (req,res) => {
 app.get('/a', (req,res) => {
     res.render('home/another')
 })
+
+
 
 //********************************************************************************* */
 

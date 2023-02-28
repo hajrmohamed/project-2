@@ -15,8 +15,16 @@ exports.mall_create_get = (req, res) => {
 
 //HTTP POST
 exports.mall_create_post = (req, res) => {
+
     console.log(req.body);
+    console.log(req.file);
+
     let mall = new Mall(req.body); //we take it from the form
+
+    let imagePath = "/uploads/" + req.file.filename;
+    console.log(imagePath);
+    mall.image = imagePath;
+
     //save mall in db
     mall.save()
       .then(() => {
@@ -34,6 +42,16 @@ exports.mall_create_post = (req, res) => {
       .then((malls) => {
    
         res.render("mall/index", { malls }); //same as articles: articles only if the value is same - write it in ejs
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  exports.mall_show_get = (req, res) => {
+    Mall.findById(req.query.id)
+      .then((mall) => {
+        res.render("mall/details", { mall });
       })
       .catch((err) => {
         console.log(err);
