@@ -21,8 +21,6 @@ app.use(expressLayout)
 
 //import routes
 const indexRoute = require('./routes/index')
-const authRoute = require('./routes/auth')
-
 const mallRoute = require("./routes/malls");
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/users')
