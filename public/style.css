@@ -1,0 +1,16 @@
+
+body{
+    background-image: url('66.jpg');
+    /* background-position:center ; */
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+nav{
+    background-color: antiquewhite;
+}
+.header{
+    text-align: center;
+    display: flex;
+    background-color: antiquewhite;
+}
+
