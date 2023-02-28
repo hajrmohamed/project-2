@@ -8,25 +8,14 @@
         <th>email</th>
     </tr>
 
-    <% User.forEach(function(user) { %>
+    <!-- <% //User.forEach(function(user) { %> -->
     <tr>
-        <td>
-            <a href="/article/detail?id=<%= article._id %>">
-            <%= article.title %> </a>
-        </td>
-
-        <td> <%= article.content %> </td>
-        <td> <%= article.isPublished %> </td>
-        <td> <%= article.totalWords %> </td>
-        <td> <%= article.author[0].name %> </td>
-        <td><a href="/article/edit?id=<%=article._id%>">Edit</a></td>
-        <td>
-            <!-- <a href="/article/delete?id=<%=//article._id%>">Delete</a> -->
-            <form method="POST" action="/article/delete?id=<%=article._id%>&_method=DELETE">
-                <button type="submit">Delete</button>
-            </form>
-        </td>
+        <td> <%= user.firstName %> </td>
+        <td> <%= user.lastName %> </td>
+        <td> <%= user.emailAddress %> </td>
+        <td> <%= user.phone %> </td>
     </tr>
-    <% }) %>
+    <% //}) %>
 
 </table>
+<button> <a href="edit" > Edit </a> </button>

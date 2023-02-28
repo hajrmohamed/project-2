@@ -13,10 +13,10 @@ const userCntrl = require("../controllers/user");
 
 // Call API
 // router.get("/profile/add", userCntrl.profile_create_get);
-router.post("/profile/edit", userCntrl.profile_create_post);
+// router.post("/profile/edit", userCntrl.profile_create_post);
 router.get("/profile/index", userCntrl.profile_index_get);
 // router.get("/profile/detail", userCntrl.profile_show_get);
 // router.delete("/profile/delete", userCntrl.profile_delete_get);
 
 module.exports = router;
-<button href="/profile/edit">Edit my profile</button>
+{/* <button href="/profile/edit">Edit my profile</button> */}
