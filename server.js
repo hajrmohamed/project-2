@@ -3,6 +3,8 @@ const app = express()
 const mongoose = require('mongoose')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
+
+
 const port = 3000
 
 
@@ -19,6 +21,7 @@ app.use(expressLayout)
 
 //import routes
 const indexRoute = require('./routes/index')
+const authRoute = require('./routes/auth')
 
 const mallRoute = require("./routes/malls");
 const authRoute = require('./routes/auth')
@@ -57,6 +60,9 @@ require('dotenv').config()
 //Node.js to look in a folder called views for all the ejs files.
 app.set("view engine", "ejs");
 
+
+
+
 mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mongodb.net/parking_app?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,
@@ -78,6 +84,8 @@ mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mo
 // app.get('/a', (req,res) => {
 //     res.render('home/another')
 // })
+
+
 
 //********************************************************************************* */
 
