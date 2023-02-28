@@ -37,11 +37,11 @@ exports.mall_create_post = (req, res) => {
   };
 
   exports.mall_index_get = (req, res) => {
-    Mall.find() //query to the db, find all the articles in db ,
+    Mall.find() //query to the db, find all the malls in db ,
       //like fetch if ok go to .then if not exit succesfully go to .catch and get error
       .then((malls) => {
    
-        res.render("mall/index", { malls }); //same as articles: articles only if the value is same - write it in ejs
+        res.render("mall/index", { malls }); //same as malls: malls only if the value is same - write it in ejs
       })
       .catch((err) => {
         console.log(err);
@@ -49,9 +49,10 @@ exports.mall_create_post = (req, res) => {
   };
 
   exports.mall_show_get = (req, res) => {
-    Mall.findById(req.query.id)
-      .then((mall) => {
-        res.render("mall/details", { mall });
+    Mall.findById(req.query.id) 
+      .then((malls) => {
+        console.log(malls)
+        res.render("mall/details", { malls }); 
       })
       .catch((err) => {
         console.log(err);

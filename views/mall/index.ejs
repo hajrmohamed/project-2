@@ -2,7 +2,7 @@
 
     <% malls.forEach(function(mall){ %>
    <div>
-        <div> <img src="..<%=mall.image%>" width="250px" height="220px"> </div>
+        <div><a href="/mall/details?id=<%=mall._id %>"> <img src="..<%=mall.image%>" width="250" height="220px"></a> </div>
         <div> <a href=""> <%= mall.name %></a> </div>
 
         <div><%= mall.location%></div>

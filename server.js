@@ -3,7 +3,7 @@ const app = express()
 const mongoose = require('mongoose')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
-const multer  = require('multer')
+
 
 const port = 3000
 
