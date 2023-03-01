@@ -32,11 +32,12 @@ let upload = multer({
 //calling API
 router.get("/event/add", isLoggedIn, EventControl.event_create_get);
 router.post("/event/add",upload.single("image"), EventControl.event_create_post);
-router.get("/event/index", isLoggedIn, EventControl.event_index_get);
-router.get("/event/details",isLoggedIn, EventControl.event_show_get);
-router.get("/event/edit",isLoggedIn, EventControl.event_update_get);
-router.post("/event/edit",isLoggedIn, EventControl.event_update_post);
 
+router.get("/event/index", EventControl.event_index_get);
+router.get("/event/details", EventControl.event_show_get);
+router.get("/event/edit", EventControl.event_update_get);
+router.post("/event/edit", EventControl.event_update_post);
+router.get("/event/delete", EventControl.event_delete_get );
 
 //default in every route
 module.exports = router;
