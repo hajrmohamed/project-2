@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const isLoggedIn = require('../lib/isLoggedIn')
 
 //Method Override
 let methodOverride = require('method-override')
@@ -14,7 +15,9 @@ const userCntrl = require("../controllers/user");
 // Call API
 // router.get("/profile/add", userCntrl.profile_create_get);
 // router.post("/profile/edit", userCntrl.profile_create_post);
-router.get("/profile/index", userCntrl.profile_index_get);
+router.get("/profile/index",userCntrl.profile_index_get);
+router.get("/profile/edit", isLoggedIn, userCntrl.profile_update_get);
+// router.post("/profile/index", userCntrl.profile_update_post);
 // router.get("/profile/detail", userCntrl.profile_show_get);
 // router.delete("/profile/delete", userCntrl.profile_delete_get);
 

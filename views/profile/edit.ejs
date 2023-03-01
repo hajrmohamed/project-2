@@ -1,18 +1,32 @@
-<!-- <h2> <%= //article.title %></h2> -->
+<h2> <%= //article.title %></h2>
 <h2> Edit Info. </h2>
-
+<form>
 <div>
-    name: <label> <%= User.firstName %> </label>
+    name : <label contenteditable=true> <%= users.firstName %> </label>
 </div>
 
 <div>
-    last Name: <label> <%= User.lastName %> </label>
+    last Name : <label contenteditable=true> <%= users.lastName %> </label>
 </div>
 
 <div>
-    email Address : <label> <%= User.emailAddress %> </label>
+    phone Number : <label contenteditable=true> <%= users.phone %> </label>
 </div>
 
 <div>
-    phone Number: <label> <%= User.phone %> </label>
+    email Address : <label contenteditable=true> <%= users.emailAddress %> </label>
 </div>
+</form>
+
+<form action="/profile/index" method="post">
+    <div>
+        old Password : <input type="password" name="oldpassword" id="">
+    
+    </div>
+    <div>
+     new pass : <input type="password" name="newpassword" id="">
+    </div>
+    <input type="hidden" value="<%= users._id%>" name="id">
+    <button type="submit">Save</button>
+</form>
+
