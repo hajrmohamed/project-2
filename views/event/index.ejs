@@ -1,6 +1,9 @@
 
-<a href="/event/add">Add event</a>
 
+
+<% if(currentUser.isAdmin) { %>
+    <a href="/event/add">Add event</a>
+    <% } %>
 
   
     <% events.forEach(function(event){ %>
