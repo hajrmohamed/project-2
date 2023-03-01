@@ -14,6 +14,7 @@ router.use(express.urlencoded({ extended: true }));
 
 
 const EventControl = require("../controllers/events");
+const isLoggedIn = require("../lib/isLoggedIn");
 
 
 const Storage = multer.diskStorage({
@@ -29,12 +30,12 @@ let upload = multer({
 
 
 //calling API
-router.get("/event/add", EventControl.event_create_get);
+router.get("/event/add", isLoggedIn, EventControl.event_create_get);
 router.post("/event/add",upload.single("image"), EventControl.event_create_post);
-router.get("/event/index", EventControl.event_index_get);
-router.get("/event/details", EventControl.event_show_get);
-router.get("/event/edit", EventControl.event_update_get);
-router.post("/event/edit", EventControl.event_update_post);
+router.get("/event/index", isLoggedIn, EventControl.event_index_get);
+router.get("/event/details",isLoggedIn, EventControl.event_show_get);
+router.get("/event/edit",isLoggedIn, EventControl.event_update_get);
+router.post("/event/edit",isLoggedIn, EventControl.event_update_post);
 
 
 //default in every route

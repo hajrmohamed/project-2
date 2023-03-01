@@ -51,5 +51,7 @@
 </div>
 </form>
 
+<% if(currentUser.isAdmin) { %>
 <a href="/event/index?id=<%= events._id %>">Delete this event</a> <br />
 <a href="/event/edit?id=<%= events._id %>">Edit</a>
+<% } %>
