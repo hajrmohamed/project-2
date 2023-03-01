@@ -1,19 +1,11 @@
-   body{
-   
-   background-image: url('/images/66.jpg');
+
+body{
+background-image: url('/images/66.jpg');
     /* background-position:center ; */
     background-repeat: no-repeat;
     /* background-size: cover; */
     background-size: contain 100%;
     /* width: 100%; */
-}
-nav{
-    background-color: antiquewhite;
-}
-.header{
-    text-align: center;
-    display: flex;
-    background-color: antiquewhite;
 }
 
 .box img{
@@ -25,4 +17,33 @@ nav{
     padding-top: 100px;
     display: flex;
     justify-content: space-around;
+}
+
+footer{
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    /* border:2px solid crimson; */
+    margin-bottom:0px;
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: blanchedalmond;
+}
+
+.navbar-brand:hover{
+    /* font-size: 35px; */
+    color: red;
+    transform: scale(1.5) perspective(1px)
+
+}
+
+.nav-item:hover{
+    /* font-size: 35px; */
+    color: red;
+    transform: scale(1.2) perspective(1px)
+
 }
