@@ -1,0 +1,13 @@
+
+<a href="/event/add">Add event</a>
+
+
+  
+    <% events.forEach(function(event){ %>
+   <div>
+        <div><a href="/event/details?id=<%=event._id %>"> <img src="..<%=event.image%>" width="250" height="220px"></a> </div>
+        <div> <a href=""> <%= event.name %></a> </div>
+
+        <div><%= event.location%></div>
+    </div>
+    <%})%>

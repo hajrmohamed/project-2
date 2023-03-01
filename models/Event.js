@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 
 const EventSchema = mongoose.Schema(
   {
-    name: String,
-    location: String,
+    name: {type: String, required:true},
+    location: {type: String, required:true},
+    date:{type: String, required:true},
     image:String,
   },
 

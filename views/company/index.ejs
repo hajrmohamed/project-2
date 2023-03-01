@@ -1,0 +1,13 @@
+
+<a href="/company/add">Add company</a>
+
+
+  
+    <% companies.forEach(function(company){ %>
+   <div>
+        <div><a href="/company/details?id=<%=company._id %>"> <img src="..<%=company.image%>" width="250" height="220px"></a> </div>
+        <div> <a href=""> <%= company.name %></a> </div>
+
+        <div><%= company.location%></div>
+    </div>
+    <%})%>

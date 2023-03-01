@@ -8,15 +8,57 @@ background-image: url('/images/66.jpg');
     /* width: 100%; */
 }
 
-.box img{
+/* .box img{
     width: 280px;
     height: 210px;
+    
+} */
+
+.box{
+    position: absolute;
+
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 210px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 30px;
+    font-weight: bold;
+
+  
+
 }
 
+.box1{
+
+      color:rgb(255, 255, 255);
+    background-image: url('/images/malls.jpg');
+    background-size:  100%;
+}
+.box2{
+    color:rgb(255, 255, 255);
+  background-image: url('/images/c.jpeg');
+  background-size:  100%;
+  background-size: cover;
+
+}
+.box3{
+    color:rgb(255, 255, 255);
+  background-image: url('/images/events.jpg');
+  background-size:  100%;
+
+
+
+}
 .container{
-    padding-top: 100px;
+    padding-top: 250px;
     display: flex;
     justify-content: space-around;
+    /* position: absolute; */
+    /* bottom: 90%; */
+ 
+    
 }
 
 footer{

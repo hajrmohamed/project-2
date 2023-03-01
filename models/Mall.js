@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const mallSchema = mongoose.Schema(
   {
-    name: String,
-    location: String,
+    name: {type: String, required:true},
+    location:{type: String, required:true},
     image:String,
   },
 

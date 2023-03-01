@@ -25,6 +25,8 @@ const mallRoute = require("./routes/malls");
 const authRoute = require('./routes/auth')
 const userRoute = require('./routes/users')
 const bookRoute = require('./routes/book')
+const compRoute = require('./routes/companies')
+const EventRoute = require('./routes/events')
 
 
 app.use(session({
@@ -43,6 +45,8 @@ app.use('/', authRoute)
 app.use("/", mallRoute);
 app.use("/", userRoute);
 app.use("/", bookRoute);
+app.use("/", compRoute);
+app.use("/", EventRoute);
 
 
 

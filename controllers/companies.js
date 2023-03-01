@@ -1,4 +1,4 @@
-const Mall = require("../models/Company");
+const Company = require("../models/Company");
 
 exports.company_create_get = (req, res) => {
     Company.find()
