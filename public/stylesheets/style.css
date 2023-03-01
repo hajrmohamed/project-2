@@ -1,10 +1,11 @@
-    background-image: url('/images/66.jpg');
+   body{
+   
+   background-image: url('/images/66.jpg');
     /* background-position:center ; */
     background-repeat: no-repeat;
     /* background-size: cover; */
     background-size: contain 100%;
     /* width: 100%; */
-
 }
 nav{
     background-color: antiquewhite;

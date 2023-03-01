@@ -5,6 +5,7 @@ const companySchema = mongoose.Schema(
     name: String,
     location: String,
     image:String,
+
   },
 
   {
