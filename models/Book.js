@@ -4,7 +4,6 @@ const bookSchema = mongoose.Schema(
   {
     time:String,
     parkType:String,
-    date:Date,
     hours:String,
     price:String,
     mallDetails:{

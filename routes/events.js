@@ -35,6 +35,8 @@ router.get("/event/index", EventControl.event_index_get);
 router.get("/event/details", EventControl.event_show_get);
 router.get("/event/edit", EventControl.event_update_get);
 router.post("/event/edit", EventControl.event_update_post);
+router.get("/event/delete", EventControl.event_delete_get );
+
 
 
 //default in every route

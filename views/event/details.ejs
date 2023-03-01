@@ -4,10 +4,10 @@
 <div> Location: <%= events.location%></div>
 <div> Date: <%= events.date%></div>
 
-<form method="post" action="/event/details">
+<form method="post" action="/book/add">
 <div> Time:
     <select name="time" id="">
-        <option value="">9:00AM</option>
+        <option value="9:00AM">9:00AM</option>
         <option value="">10:00AM</option>
         <option value="">11:00AM</option>
         <option value="">12:00PM </option>
@@ -25,15 +25,15 @@
 </div>
 
 <div> Park Type:
-    <select name="pt" id="">
-        <option value="vip">VIP</option>
-        <option value="premium">Premium</option>
-        <option value="standard">Standard</option>
+    <select name="parkType" id="parkType">
+        <option value="vip">VIP - 20BD</option>
+        <option value="premium">Premium - 10BD</option>
+        <option value="standard">Standard - 5BD</option>
     </select>
 </div>
 
 <div> Park Hour:
-    <select name="hour" id="">
+    <select name="hours" id="hours">
         <option value="1">1 hrs</option>
         <option value="2">2 hrs</option>
         <option value="3">3 hrs</option>
@@ -51,5 +51,29 @@
 </div>
 </form>
 
-<a href="/event/index?id=<%= events._id %>">Delete this event</a> <br />
+<a href="/event/delete?id=<%= events._id %>">Delete this event</a> <br />
 <a href="/event/edit?id=<%= events._id %>">Edit</a>
+
+
+<script>
+    $("#hours").change(() => {
+        // alert($("#hours").val())
+        let hours = $("#hours").val();
+        hours = parseInt(hours);
+        let partType = $("#parkType").val()
+        let rate = 0;
+        // alert($("#parkType").val())
+        if(partType == "standard"){
+            rate = 5
+        }
+
+
+        let price = rate * hours;
+        alert(price);
+
+    })
+
+    // $("#parkType").change(() => {
+    //     alert($("#parkType").val())
+    // })
+</script>
