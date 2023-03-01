@@ -51,9 +51,11 @@
 </div>
 </form>
 
-<a href="/event/delete?id=<%= events._id %>">Delete this event</a> <br />
-<a href="/event/edit?id=<%= events._id %>">Edit</a>
 
+<% if(currentUser.isAdmin) { %>
+<a href="/event/index?id=<%= events._id %>">Delete this event</a> <br />
+<a href="/event/edit?id=<%= events._id %>">Edit</a>
+<% } %>
 
 <script>
     $("#hours").change(() => {
@@ -78,10 +80,7 @@
         // alert(price);
         // $('.price').html($price.val());
         document.querySelector(".price").innerHTML = "Total price " + price;
-
-       
     })
-
 
     // $("#parkType").change(() => {
     //     alert($("#parkType").val())

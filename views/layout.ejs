@@ -28,23 +28,32 @@
               <!-- <li class="nav-item">
                 <a class="nav-link" href="/mall/add" style="color: black;">Add Mall</a>
               </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="/auth/signup" style="color: black;">Sign Up Here</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/auth/signin" style="color: black;">Sign In Here</a>
-              </li>
+              <% if(!currentUser) { %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/auth/signup" style="color: black;">Sign Up Here</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/auth/signin" style="color: black;">Sign In Here</a>
+                </li>
+                <% } %>
+                <% if(currentUser) { %>
               <li class="nav-item">
                 <a class="nav-link" href="/auth/signout" style="color: black;">Sign out</a>
               </li>
+              <% } %>
+              <% if(currentUser) { %>
               <li class="nav-item">
                 <a class="nav-link" href="/profile/index" style="color: black;">Profile</a>
+                <% } %>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
+      <% if(currentUser) { %>
+        <div style="font-size: x-large;">  &nbsp &nbsp Hi <%= currentUser.firstName %> <%= currentUser.lastName%></div> 
+      <% } %>
     <%- body %>
 
     <br>
