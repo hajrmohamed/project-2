@@ -45,7 +45,7 @@
     </select>
 </div>
 
-
+<div class="price"> Total price: </div>
 <div>
     <button type="submit">complete booking</button>
 </div>
@@ -66,12 +66,22 @@
         if(partType == "standard"){
             rate = 5
         }
+        else if(partType == "vip"){
+            rate = 200
+        }
+        else if(partType == "premium"){
+            rate = 10
+        }
 
 
         let price = rate * hours;
-        alert(price);
+        // alert(price);
+        // $('.price').html($price.val());
+        document.querySelector(".price").innerHTML = "Total price " + price;
 
+       
     })
+
 
     // $("#parkType").change(() => {
     //     alert($("#parkType").val())
