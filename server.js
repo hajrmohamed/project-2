@@ -76,7 +76,7 @@ app.set("view engine", "ejs");
 
 
 
-mongoose.connect("mongodb+srv://Mahmood_Ibrahim:H001216317oda@mahmood.yt3yrm3.mongodb.net/parking_app?retryWrites=true&w=majority",
+mongoose.connect(process.env.park_APP,
     {
         useNewUrlParser: true,
         useUnifiedTopology : true
