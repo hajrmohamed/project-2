@@ -1,0 +1,91 @@
+
+
+<div> Name:  <%= companies.name %></div>
+<div> Location: <%= companies.location%></div>
+
+<form method="post" action="/book/index">
+<div> Time:
+    <select name="time" id="">
+        <option value="">9:00AM</option>
+        <option value="">10:00AM</option>
+        <option value="">11:00AM</option>
+        <option value="">12:00PM </option>
+        <option value="">1:00PM</option>
+        <option value="">2:00PM</option>
+        <option value="">3:00PM</option>
+        <option value="">4:00PM</option>
+        <option value="">5:00PM</option>
+        <option value="">6:00PM</option>
+        <option value="">7:00PM</option>
+        <option value="">8:00PM</option>
+        <option value="">9:00PM</option>
+        <option value="">10:00PM</option>
+    </select>
+</div>
+
+<div> Park Type:
+    <select name="pt" id="">
+        <option value="vip">VIP</option>
+        <option value="premium">Premium</option>
+        <option value="standard">Standard</option>
+    </select>
+</div>
+
+<div> Park Hour:
+    <select name="hour" id="">
+        <option value="1">1 hrs</option>
+        <option value="2">2 hrs</option>
+        <option value="3">3 hrs</option>
+        <option value="4">4 hrs</option>
+        <option value="5">5 hrs</option>
+        <option value="6">6 hrs</option>
+        <option value="7">7 hrs</option>
+        <option value="8">8 hrs</option>
+    </select>
+</div>
+
+<div class="price">  </div>
+
+<div>
+    <button type="submit">complete booking</button>
+</div>
+
+
+</form>
+
+    <% //if(currentUser.isAdmin) { %>
+    <a href="/company/delete?id=<%= companies._id %>">Delete</a>
+    <% //} %>
+
+
+    
+    <script>
+        $("#hours").change(() => {
+            // alert($("#hours").val())
+            let hours = $("#hours").val();
+            hours = parseInt(hours);
+            let partType = $("#parkType").val()
+            let rate = 0;
+            // alert($("#parkType").val())
+            if(partType == "standard"){
+                rate = 5
+            }
+            else if(partType == "vip"){
+                rate = 200
+            }
+            else if(partType == "premium"){
+                rate = 10
+            }
+    
+    
+            let price = rate * hours;
+            // alert(price);
+            // $('.price').html($price.val());
+            document.querySelector(".price").innerHTML = "Total price " + price;
+        })
+    
+        // $("#parkType").change(() => {
+        //     alert($("#parkType").val())
+        // })
+    </script>
+    

@@ -1,0 +1,17 @@
+
+<h2>Companies</h2>
+
+<% //if(currentUser.isAdmin) { %>
+    <a href="/company/add">Add company</a>
+    <% //} %>
+<div class="cards" style="justify-content:center;">
+    <% companies.forEach(function(company){ %>
+    <a href="/company/details?id=<%=company._id %>"> <div class="card" style="width: 26rem;">
+        <img class="card-img-top" src="..<%=company.image%>" width="250" height="220px" >
+        <div class="card-body"> </a>
+          <h5 class="card-title"><%= company.name %></h5>
+          <a href="/company/details?id=<%=company._id %>" class="btn btn-primary">book now</a>
+       </div>
+      </div>
+      <%})%>
+    </div>
