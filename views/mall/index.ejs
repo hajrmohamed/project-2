@@ -1,13 +1,21 @@
 
-<a href="/mall/add">Add Mall</a>
-
+<h1>Malls</h1>
+<% if(currentUser.isAdmin) { %>
+    <a href="/mall/add">Add Mall</a>
+    <% } %>
+    
 
   
-    <% malls.forEach(function(mall){ %>
-   <div>
-        <div><a href="/mall/details?id=<%=mall._id %>"> <img src="..<%=mall.image%>" width="250" height="220px"></a> </div>
-        <div> <a href=""> <%= mall.name %></a> </div>
 
-        <div><%= mall.location%></div>
-    </div>
-    <%})%>
+    <div class="cards" style="justify-content:center; ">
+    <% malls.forEach(function(mall){ %>
+        <a href="/mall/details?id=<%=mall._id %>"> <div class="card" style="width: 26rem;">
+            <img class="card-img-top" src="..<%=mall.image%>" width="250" height="220px" >
+            <div class="card-body" style="margin-left: 40px;"> </a>
+              <h5 class="card-title"><%= mall.name %></h5>
+              <a href="/company/details?id=<%=mall._id %>" class="btn btn-primary">book now</a>
+           </div>
+           
+          </div>
+          <%})%>
+        </div>

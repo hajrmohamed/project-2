@@ -33,6 +33,7 @@ router.get("/company/add", companyControl.company_create_get);
 router.post("/company/add",upload.single("image"), companyControl.company_create_post);
 router.get("/company/index", companyControl.company_index_get);
 router.get("/company/details", companyControl.company_show_get);
+router.get("/company/delete", companyControl.company_delete_get);
 
 //default in every route
 module.exports = router;

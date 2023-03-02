@@ -1,16 +1,20 @@
 
-
-
-<% if(currentUser.isAdmin) { %>
+<h2>Events</h2>
+<% //if(currentUser.isAdmin) { %>
     <a href="/event/add">Add event</a>
-    <% } %>
+    <% //} %>
 
-  
+
+
+    <div class="cards" style="justify-content:center;">
     <% events.forEach(function(event){ %>
-   <div>
-        <div><a href="/event/details?id=<%=event._id %>"> <img src="..<%=event.image%>" width="250" height="220px"></a> </div>
-        <div> <a href=""> <%= event.name %></a> </div>
-
-        <div><%= event.location%></div>
-    </div>
-    <%})%>
+    <a href="/event/details?id=<%=event._id %>"> <div class="card" style="width: 26rem;">
+        <img class="card-img-top" src="..<%=event.image%>" width="250" height="220px" >
+        <div class="card-body"> </a>
+          <h5 class="card-title"><%= event.name %></h5>
+          <a href="/event/details?id=<%=event._id %>" class="btn btn-primary">book now</a>
+       </div>
+      
+      </div>
+      <%})%>
+     </div>

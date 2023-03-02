@@ -57,3 +57,13 @@ exports.company_create_post = (req, res) => {
         console.log(err);
       });
   };
+
+  exports.company_delete_get = (req, res) => {
+    Company.findByIdAndDelete(req.query.id)
+      .then(() => {
+        res.redirect("/company/index");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };

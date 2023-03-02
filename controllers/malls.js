@@ -58,3 +58,13 @@ exports.mall_create_post = (req, res) => {
         console.log(err);
       });
   };
+
+  exports.mall_delete_get = (req, res) => {
+    Mall.findByIdAndDelete(req.query.id)
+      .then(() => {
+        res.redirect("/mall/index");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };

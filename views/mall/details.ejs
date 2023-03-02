@@ -3,7 +3,7 @@
 <div> Name:  <%= malls.name %></div>
 <div> Location: <%= malls.location%></div>
 
-<form method="post" action="/book/index">
+<form method="post" action="/book/add">
 <div> Time:
     <select name="time" id="">
         <option value="">9:00AM</option>
@@ -43,10 +43,46 @@
         <option value="8">8 hrs</option>
     </select>
 </div>
-
+<div class="price">  </div>
 
 <div>
     <button type="submit">complete booking</button>
 </div>
 
 </form>
+
+<% if(currentUser.isAdmin) { %>
+    <a href="/mall/delete?id=<%= malls._id %>">Delete</a>
+    <% } %>
+
+
+    <script>
+        $("#hours").change(() => {
+            // alert($("#hours").val())
+            let hours = $("#hours").val();
+            hours = parseInt(hours);
+            let partType = $("#parkType").val()
+            let rate = 0;
+            // alert($("#parkType").val())
+            if(partType == "standard"){
+                rate = 5
+            }
+            else if(partType == "vip"){
+                rate = 200
+            }
+            else if(partType == "premium"){
+                rate = 10
+            }
+    
+    
+            let price = rate * hours;
+            // alert(price);
+            // $('.price').html($price.val());
+            document.querySelector(".price").innerHTML = "Total price " + price;
+        })
+    
+        // $("#parkType").change(() => {
+        //     alert($("#parkType").val())
+        // })
+    </script>
+    

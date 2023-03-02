@@ -4,7 +4,7 @@
 <div> Location: <%= events.location%></div>
 <div> Date: <%= events.date%></div>
 
-<form method="post" action="/book/add">
+<form method="post" action="/book/index">
 <div> Time:
     <select name="time" id="">
         <option value="9:00AM">9:00AM</option>
@@ -45,17 +45,17 @@
     </select>
 </div>
 
-<div class="price"> Total price: </div>
+<div class="price">  </div>
 <div>
     <button type="submit">complete booking</button>
 </div>
 </form>
 
 
-<% if(currentUser.isAdmin) { %>
-<a href="/event/index?id=<%= events._id %>">Delete this event</a> <br />
+<% //if(currentUser.isAdmin) { %>
+<a href="/event/delete?id=<%= events._id %>">Delete this event</a> <br />
 <a href="/event/edit?id=<%= events._id %>">Edit</a>
-<% } %>
+<% //} %>
 
 <script>
     $("#hours").change(() => {
@@ -79,7 +79,7 @@
         let price = rate * hours;
         // alert(price);
         // $('.price').html($price.val());
-        document.querySelector(".price").innerHTML = "Total price " + price;
+        document.querySelector(".price").innerHTML =  "Total price: " + price;
     })
 
     // $("#parkType").change(() => {
